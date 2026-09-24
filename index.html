@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather & Wear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro">
+        <p class="eyebrow">A tiny daily forecast</p>
+        <h1>Dress for the day<br /><span>you actually get.</span></h1>
+        <p class="intro-copy">Find your local weather and get a simple suggestion for what to wear outside.</p>
+        <form id="search-form" class="search-form">
+          <label class="sr-only" for="location-input">Town or city</label>
+          <input id="location-input" name="location" type="text" placeholder="Try London, Tokyo, or your town" autocomplete="off" />
+          <button type="submit">Check weather <span aria-hidden="true">→</span></button>
+        </form>
+        <button id="locate-button" class="location-button" type="button">◎ Use my location</button>
+        <p id="status-message" class="status">Weather data by Open-Meteo.</p>
+      </section>
+      <section id="weather-result" class="weather-card empty" aria-live="polite">
+        <div class="empty-sky" aria-hidden="true">☼</div>
+        <p class="eyebrow">Your forecast is waiting</p>
+        <p class="muted">Search for a place to see the temperature and a useful outfit idea.</p>
+      </section>
+    </main>
+    <footer>Made for curious beginners <span aria-hidden="true">·</span> No sign-up needed</footer>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
